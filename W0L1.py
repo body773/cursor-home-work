@@ -2,16 +2,14 @@
 my_list=[]
 i=11
 k=1
-for i in range(1,i,1):
+for i in range(1,i):
     my_list.append(k)
     k+=3
 print("Task 2.1 ",my_list)
 
 #Task 2.2
 my_listnew = my_list
-addtolist = [1, 5, 13, 20]
-for i in range(0,4,1):
-    my_listnew.append(addtolist[i])
+my_listnew.extend([1, 5, 13, 20])
 print ("Task 2.2 ",my_listnew)
 
 #Task2.3
@@ -31,7 +29,7 @@ print("Task 2.4 ",compare_elements(my_listnew, my_set))
 def get_value_from_list(data:list, index:int):
     try:
         return data[index]
-    except Exception as f:
+    except:
         return "None"
 
 print("Task 3 ",get_value_from_list([1,2,3], 1))
